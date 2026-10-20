@@ -1,0 +1,9 @@
+{
+  "name": "food-delivery-system-basic",
+  "version": "1.0.0",
+  "description": "Beginner-friendly JavaScript OOP food delivery practical",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test.js"
+  }
+}
