@@ -1,7 +1,7 @@
 class FoodItem {
     #price;
 
-    constructor(foodName, foodPrice) {
+    constructor(name, price) {
         if (name === "" || typeof name !== "string") {
             throw new Error("Food name must not be empty.");
         }
@@ -30,5 +30,38 @@ class FoodItem {
 
     calculateDeliveryFee() {
         return 0;
+    }
+}
+
+class Pizza extends FoodItem {
+    constructor(name, price, size) {
+        super(name, price);
+        this.size = size;
+    }
+
+    calculateDeliveryFee() {
+        return 20;
+    }
+}
+
+class Burger extends FoodItem {
+    constructor(name, price, pattyType) {
+        super(name, price);
+        this.pattyType = pattyType;
+    }
+
+    calculateDeliveryFee() {
+        return 15;
+    }
+}
+
+class Drink extends FoodItem {
+    constructor(name, price, volume) {
+        super(name, price);
+        this.volume = volume;
+    }
+
+    calculateDeliveryFee() {
+        return 5;
     }
 }
